@@ -6,15 +6,15 @@ class AboutClassMethods < EdgeCase::Koan
 
   def test_objects_are_objects
     fido = Dog.new
-    assert_equal __, fido.is_a?(Object)
+    assert_equal true, fido.is_a?(Object)
   end
 
   def test_classes_are_classes
-    assert_equal __, Dog.is_a?(Class)
+    assert_equal true, Dog.is_a?(Class)
   end
 
   def test_classes_are_objects_too
-    assert_equal __, Dog.is_a?(Object)
+    assert_equal true, Dog.is_a?(Object)
   end
 
   def test_objects_have_methods
@@ -47,7 +47,7 @@ class AboutClassMethods < EdgeCase::Koan
   end
 
   # ------------------------------------------------------------------
-  
+
   class Dog2
     def wag
       :instance_level_wag
@@ -96,14 +96,14 @@ class AboutClassMethods < EdgeCase::Koan
   def test_you_can_define_class_methods_inside_the_class
     assert_equal __, Dog.a_class_method
   end
-      
+
 
   # ------------------------------------------------------------------
 
   LastExpressionInClassStatement = class Dog
                                      21
                                    end
-  
+
   def test_class_statements_return_the_value_of_their_last_expression
     assert_equal __, LastExpressionInClassStatement
   end
