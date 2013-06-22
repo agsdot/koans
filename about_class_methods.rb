@@ -6,24 +6,24 @@ class AboutClassMethods < EdgeCase::Koan
 
   def test_objects_are_objects
     fido = Dog.new
-    assert_equal true, fido.is_a?(Object)
+    assert_equal __, fido.is_a?(Object)
   end
 
   def test_classes_are_classes
-    assert_equal true, Dog.is_a?(Class)
+    assert_equal __, Dog.is_a?(Class)
   end
 
   def test_classes_are_objects_too
-    assert_equal true, Dog.is_a?(Object)
+    assert_equal __, Dog.is_a?(Object)
   end
 
   def test_objects_have_methods
     fido = Dog.new
-    assert fido.methods.size > 56
+    assert fido.methods.size > _n_
   end
 
   def test_classes_have_methods
-    assert Dog.methods.size > 97
+    assert Dog.methods.size > _n_
   end
 
   def test_you_can_define_methods_on_individual_objects
@@ -31,7 +31,7 @@ class AboutClassMethods < EdgeCase::Koan
     def fido.wag
       :fidos_wag
     end
-    assert_equal :fidos_wag, fido.wag
+    assert_equal __, fido.wag
   end
 
   def test_other_objects_are_not_affected_by_these_singleton_methods
